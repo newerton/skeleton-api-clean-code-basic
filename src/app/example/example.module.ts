@@ -56,8 +56,8 @@ const useCaseProviders: Provider[] = [
 //   NestWrapperGetExamplePreviewQueryHandler,
 //   {
 //     provide: ExampleDITokens.GetExamplePreviewQueryHandler,
-//     useFactory: (userRepository) =>
-//       new HandleGetExamplePreviewQueryService(userRepository),
+//     useFactory: (exampleRepository) =>
+//       new HandleGetExamplePreviewQueryService(exampleRepository),
 //     inject: [ExampleDITokens.ExampleRepository],
 //   },
 // ];

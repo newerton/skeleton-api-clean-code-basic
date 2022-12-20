@@ -10,7 +10,7 @@ import { TypeOrmExample } from '../entities/TypeOrmExample';
 export class TypeOrmExampleRepositoryAdapter
   implements ExampleRepository<Example>
 {
-  private readonly userAlias: string = 'example';
+  private readonly tableAlias: string = 'example';
   constructor(private repository: Repository<TypeOrmExample>) {}
 
   async create(payload: Example): Promise<void> {
@@ -81,7 +81,7 @@ export class TypeOrmExampleRepositoryAdapter
   }
 
   private buildQueryBuilder(): SelectQueryBuilder<TypeOrmExample> {
-    return this.repository.createQueryBuilder(this.userAlias).select();
+    return this.repository.createQueryBuilder(this.tableAlias).select();
   }
 
   private extendQueryWithByProperties(
@@ -89,10 +89,10 @@ export class TypeOrmExampleRepositoryAdapter
     query: SelectQueryBuilder<TypeOrmExample>,
   ): void {
     if (filter.id) {
-      query.andWhere(`"${this.userAlias}"."id" = :id`, { id: filter.id });
+      query.andWhere(`"${this.tableAlias}"."id" = :id`, { id: filter.id });
     }
     if (filter.name) {
-      query.andWhere(`"${this.userAlias}"."name" LIKE :name`, {
+      query.andWhere(`"${this.tableAlias}"."name" LIKE :name`, {
         name: filter.name,
       });
     }

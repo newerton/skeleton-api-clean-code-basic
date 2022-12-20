@@ -1,4 +1,4 @@
-import Joi from 'joi';
+import * as JoiBase from 'joi';
 
 import {
   JoiValidationException,
@@ -7,8 +7,9 @@ import {
 } from '@app/@common/pipes/joi-validation.pipe';
 import { CreateSchema } from '@app/@common/schemas/joi/joi.create-schema.interface';
 
+const Joi = JoiBase;
 export class TestSchema implements CreateSchema {
-  createSchema(): Joi.ObjectSchema {
+  createSchema(): JoiBase.ObjectSchema {
     return Joi.object({
       name: Joi.string().required(),
     });

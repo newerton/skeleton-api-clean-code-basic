@@ -26,14 +26,14 @@ export class CreateExampleService implements CreateExampleUseCase {
       }),
     );
 
-    const user: Example = await Example.create({
+    const model: Example = await Example.create({
       name: payload.name,
       password: payload.password,
       is_active: payload.is_active,
     });
 
-    await this.repository.create(user);
+    await this.repository.create(model);
 
-    return ExampleUseCaseDto.newFromExample(user);
+    return ExampleUseCaseDto.newFromExample(model);
   }
 }

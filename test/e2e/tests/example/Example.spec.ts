@@ -9,7 +9,7 @@ import { Code } from '@core/@shared/domain/error/Code';
 import { Example } from '@core/example/domain/entity/Example';
 import { TestServer } from '@test/common/TestServer';
 import { ResponseExpect } from '@test/e2e/expect/ResponseExpect';
-import { ExampleFixture } from '@test/e2e/fixture/UserFixture';
+import { ExampleFixture } from '@test/e2e/fixture/ExampleFixture';
 
 describe('Example', () => {
   let testServer: TestServer;
