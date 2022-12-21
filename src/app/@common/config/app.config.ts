@@ -1,10 +1,15 @@
 import * as dotenv from 'dotenv';
 import { from } from 'env-var';
 
-dotenv.config();
+dotenv.config({
+  path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env',
+});
 const env = from(process.env, {});
 
 export class ApiServerConfig {
+  constructor() {
+    console.log(process.env.NODE_ENV);
+  }
   public static readonly ENV: string = env
     .get('NODE_ENV')
     .default('development')
