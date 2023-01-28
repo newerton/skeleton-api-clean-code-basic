@@ -20,17 +20,21 @@ export class HttpLoggingInterceptor implements NestInterceptor {
     const request: Request = context.switchToHttp().getRequest();
     const requestStartDate: number = Date.now();
 
-    return next.handle().pipe(
-      tap((): void => {
-        const requestFinishDate: number = Date.now();
+    if (request.method && request.path) {
+      return next.handle().pipe(
+        tap((): void => {
+          const requestFinishDate: number = Date.now();
 
-        const message: string =
-          `Method: ${request.method}; ` +
-          `Path: ${request.path}; ` +
-          `SpentTime: ${requestFinishDate - requestStartDate}ms`;
+          const message: string =
+            `Method: ${request.method}; ` +
+            `Path: ${request.path}; ` +
+            `SpentTime: ${requestFinishDate - requestStartDate}ms`;
 
-        Logger.log(message, HttpLoggingInterceptor.name);
-      }),
-    );
+          Logger.log(message, HttpLoggingInterceptor.name);
+        }),
+      );
+    } else {
+      return next.handle();
+    }
   }
 }

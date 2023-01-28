@@ -8,14 +8,9 @@ const Joi = JoiBase;
 export class CreateExampleSchema implements CreateSchema {
   createSchema(): JoiBase.ObjectSchema {
     return Joi.object({
-      name: Joi.string().required().label('Nome').messages(joiMessagesSchema),
-      password: Joi.string()
+      title: Joi.string()
         .required()
-        .label('Senha')
-        .messages(joiMessagesSchema),
-      is_active: Joi.boolean()
-        .default(false)
-        .label('Status')
+        .label('Título')
         .messages(joiMessagesSchema),
     });
   }

@@ -7,9 +7,6 @@ dotenv.config({
 const env = from(process.env, {});
 
 export class ApiServerConfig {
-  constructor() {
-    console.log(process.env.NODE_ENV);
-  }
   public static readonly ENV: string = env
     .get('NODE_ENV')
     .default('development')

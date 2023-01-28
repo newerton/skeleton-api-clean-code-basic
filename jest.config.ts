@@ -27,7 +27,7 @@ export default {
         sourceMaps: 'inline',
         module: {
           type: 'es6',
-          noInterop: false,
+          noInterop: true,
         },
       },
     ],

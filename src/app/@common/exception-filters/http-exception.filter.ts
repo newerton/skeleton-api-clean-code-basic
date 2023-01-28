@@ -72,7 +72,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
         error.code,
         error.error,
         error.message,
-        [error.data],
+        error.data ? [error.data] : [],
       );
     }
 
