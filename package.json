@@ -68,7 +68,7 @@
     "rimraf": "^3.0.2",
     "rxjs": "7.8.0",
     "swagger-themes": "1.2.22",
-    "typeorm": "0.3.11",
+    "typeorm": "0.3.14",
     "uuid": "9.0.0"
   },
   "devDependencies": {
