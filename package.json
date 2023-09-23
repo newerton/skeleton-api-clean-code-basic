@@ -56,7 +56,7 @@
     "dotenv": "16.0.3",
     "dotenv-expand": "10.0.0",
     "env-var": "7.3.0",
-    "graphql": "16.6.0",
+    "graphql": "16.8.1",
     "graphql-query-complexity": "0.12.0",
     "helmet": "6.0.1",
     "joi": "17.7.0",
