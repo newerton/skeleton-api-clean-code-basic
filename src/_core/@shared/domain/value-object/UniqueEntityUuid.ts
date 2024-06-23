@@ -1,8 +1,8 @@
 import { validate as uuidValidate, v4 as uuidv4 } from 'uuid';
 
+import { ValueObject } from './ValueObject';
 import { Code } from '../error/Code';
 import { Exception } from '../exception/Exception';
-import { ValueObject } from './ValueObject';
 
 export class UniqueEntityUuid extends ValueObject<string> {
   constructor(protected readonly id?: string) {

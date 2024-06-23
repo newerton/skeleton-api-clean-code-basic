@@ -82,7 +82,7 @@ describe('CreateExampleService', () => {
             created_at: new Date(),
             updated_at: new Date(),
             deleted_at: null,
-          } as Example),
+          }) as Example,
       );
 
       expect.hasAssertions();

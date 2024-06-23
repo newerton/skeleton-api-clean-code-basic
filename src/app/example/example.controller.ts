@@ -83,9 +83,8 @@ export class ExampleController {
       is_active: body.is_active ?? false,
     });
 
-    const created: ExampleUseCaseDto = await this.createUseCase.execute(
-      adapter,
-    );
+    const created: ExampleUseCaseDto =
+      await this.createUseCase.execute(adapter);
 
     return CoreApiResponse.success(created);
   }
@@ -120,9 +119,8 @@ export class ExampleController {
       is_active: body.is_active ?? false,
     });
 
-    const updated: ExampleUseCaseDto = await this.updateUseCase.execute(
-      adapter,
-    );
+    const updated: ExampleUseCaseDto =
+      await this.updateUseCase.execute(adapter);
 
     return CoreApiResponse.success(updated);
   }

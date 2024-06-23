@@ -12,7 +12,10 @@ import { UniqueEntityUuid } from '../value-object/UniqueEntityUuid';
 export abstract class Entity<TProperties, TRules extends object> {
   readonly _id: UniqueEntityUuid;
 
-  constructor(public readonly payload: TProperties, id?: UniqueEntityUuid) {
+  constructor(
+    public readonly payload: TProperties,
+    id?: UniqueEntityUuid,
+  ) {
     this._id = id || new UniqueEntityUuid();
   }
 

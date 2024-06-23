@@ -12,7 +12,10 @@ type MockProperties = {
 };
 
 class MockEntity extends Entity<MockProperties, MockRules> {
-  constructor(public readonly payload: MockProperties, id?: UniqueEntityUuid) {
+  constructor(
+    public readonly payload: MockProperties,
+    id?: UniqueEntityUuid,
+  ) {
     super(payload, id);
   }
 

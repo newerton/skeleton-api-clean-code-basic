@@ -2,7 +2,7 @@ import type { INestApplication } from '@nestjs/common';
 import { Logger } from '@nestjs/common';
 import type { SwaggerCustomOptions } from '@nestjs/swagger';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { SwaggerTheme } from 'swagger-themes';
+import { SwaggerTheme, SwaggerThemeNameEnum } from 'swagger-themes';
 
 import { ApiServerConfig } from './app.config';
 
@@ -17,10 +17,10 @@ export const applySwagger = (app: INestApplication) => {
     .build();
   const document = SwaggerModule.createDocument(app, config);
 
-  const theme = new SwaggerTheme('v3');
+  const theme = new SwaggerTheme();
   const customOptions: SwaggerCustomOptions = {
     customSiteTitle: 'Skeleton API Docs',
-    customCss: theme.getBuffer('dark'),
+    customCss: theme.getBuffer(SwaggerThemeNameEnum.ONE_DARK),
     explorer: true,
     swaggerOptions: {
       persistAuthorization: true,
