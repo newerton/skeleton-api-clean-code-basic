@@ -62,7 +62,7 @@
     "rxjs": "7.8.2",
     "swagger-themes": "1.4.3",
     "typeorm": "0.3.27",
-    "uuid": "13.0.0"
+    "uuid": "14.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "20.1.0",
