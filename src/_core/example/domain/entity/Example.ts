@@ -1,13 +1,11 @@
-import { compare, genSalt, hash } from 'bcryptjs';
-
 import { Entity } from '@core/@shared/domain/entity/Entity';
 import { Replace } from '@core/@shared/domain/type/CommonTypes';
 import { UniqueEntityUuid } from '@core/@shared/domain/value-object/UniqueEntityUuid';
-
+import { compare, genSalt, hash } from 'bcryptjs';
+import { ExampleValidationRules } from '../validator/ExampleValidationRules';
 import { CreateExampleEntityPayload } from './type/CreateExampleEntityPayload';
 import { EditExampleEntityPayload } from './type/EditExampleEntityPayload';
 import { ExampleProperties } from './type/ExampleProperties';
-import { ExampleValidationRules } from '../validator/ExampleValidationRules';
 
 export class Example extends Entity<ExampleProperties, ExampleValidationRules> {
   constructor(

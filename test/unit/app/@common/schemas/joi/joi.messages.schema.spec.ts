@@ -1,4 +1,5 @@
 import MessagesSchema from '@app/@common/schemas/joi/joi.messages.schema';
+
 describe('MessagesSchema', () => {
   test('Should validate all attributes', () => {
     const messages = MessagesSchema;

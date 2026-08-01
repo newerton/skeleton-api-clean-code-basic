@@ -15,8 +15,8 @@ export abstract class ValueObject<Value = any> {
     if (typeof this.value !== 'object' || this.value === null) {
       try {
         return this.value.toString();
-      } catch (e) {
-        return this.value + '';
+      } catch (_e) {
+        return `${this.value}`;
       }
     }
     const valueStr = this.value.toString();

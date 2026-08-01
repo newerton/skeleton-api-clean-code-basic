@@ -1,5 +1,3 @@
-import { Injectable } from '@nestjs/common';
-
 import { Code } from '@core/@shared/domain/error/Code';
 import { Exception } from '@core/@shared/domain/exception/Exception';
 import { CoreAssert } from '@core/@shared/domain/utils/assert/CoreAssert';
@@ -8,6 +6,7 @@ import { ExampleUseCaseDto } from '@core/example/application/use-case/dto/Exampl
 import { Example } from '@core/example/domain/entity/Example';
 import { ExampleRepository } from '@core/example/domain/port/repository/ExampleRepository';
 import { CreateExamplePort } from '@core/example/domain/port/use-case/CreateExamplePort';
+import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class CreateExampleService implements CreateExampleUseCase {

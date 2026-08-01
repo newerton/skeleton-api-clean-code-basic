@@ -1,6 +1,5 @@
-import { Exclude, Expose, plainToClass } from 'class-transformer';
-
 import { Example } from '@core/example/domain/entity/Example';
+import { Exclude, Expose, plainToClass } from 'class-transformer';
 
 @Exclude()
 export class ExampleUseCaseDto {
@@ -18,6 +17,6 @@ export class ExampleUseCaseDto {
   }
 
   public static newListFromExamples(models: Example[]): ExampleUseCaseDto[] {
-    return models.map((model) => this.newFromExample(model));
+    return models.map((model) => ExampleUseCaseDto.newFromExample(model));
   }
 }

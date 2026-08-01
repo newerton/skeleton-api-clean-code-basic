@@ -1,10 +1,9 @@
-import { IsNumber, IsString } from 'class-validator';
-
 import { Optional } from '@core/@shared/domain/type/CommonTypes';
 import {
   ClassValidationDetails,
   ClassValidator,
 } from '@core/@shared/domain/utils/class-validator/ClassValidator';
+import { IsNumber, IsString } from 'class-validator';
 
 class MockClass {
   @IsString()

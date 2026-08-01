@@ -17,7 +17,7 @@ export type ValidationType = {
 export class JoiValidationPipe implements PipeTransform {
   private readonly schema: JoiBase.AnySchema;
 
-  constructor(private schemaFactory: CreateSchema) {
+  constructor(schemaFactory: CreateSchema) {
     this.schema = schemaFactory.createSchema();
   }
 

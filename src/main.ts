@@ -1,9 +1,8 @@
+import { ApiServerConfig } from '@app/@common/config/app.config';
+import { applySwagger } from '@app/@common/config/swagger.config';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import helmet from 'helmet';
-
-import { ApiServerConfig } from '@app/@common/config/app.config';
-import { applySwagger } from '@app/@common/config/swagger.config';
 
 import { MainModule } from './main.module';
 

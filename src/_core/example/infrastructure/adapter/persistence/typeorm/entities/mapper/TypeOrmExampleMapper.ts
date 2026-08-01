@@ -21,7 +21,7 @@ export class TypeOrmExampleMapper {
 
   public static toOrmEntities(domainExamples: Example[]): TypeOrmExample[] {
     return domainExamples.map((domainExample) =>
-      this.toOrmEntity(domainExample),
+      TypeOrmExampleMapper.toOrmEntity(domainExample),
     );
   }
 
@@ -42,6 +42,6 @@ export class TypeOrmExampleMapper {
   }
 
   public static toDomainEntities(orms: TypeOrmExample[]): Example[] {
-    return orms.map((orm) => this.toDomainEntity(orm));
+    return orms.map((orm) => TypeOrmExampleMapper.toDomainEntity(orm));
   }
 }

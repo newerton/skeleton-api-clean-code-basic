@@ -1,8 +1,7 @@
-import { Repository, SelectQueryBuilder } from 'typeorm';
-
 import { Optional } from '@core/@shared/domain/type/CommonTypes';
 import { Example } from '@core/example/domain/entity/Example';
 import { ExampleRepository } from '@core/example/domain/port/repository/ExampleRepository';
+import { Repository, SelectQueryBuilder } from 'typeorm';
 
 import { TypeOrmExampleMapper } from '../entities/mapper/TypeOrmExampleMapper';
 import { TypeOrmExample } from '../entities/TypeOrmExample';

@@ -1,3 +1,6 @@
+import { CoreApiResponse } from '@core/@shared/domain/api/CoreApiResponse';
+import { Code } from '@core/@shared/domain/error/Code';
+import { Exception } from '@core/@shared/domain/exception/Exception';
 import {
   ArgumentsHost,
   Catch,
@@ -7,10 +10,6 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { Request, Response } from 'express';
-
-import { CoreApiResponse } from '@core/@shared/domain/api/CoreApiResponse';
-import { Code } from '@core/@shared/domain/error/Code';
-import { Exception } from '@core/@shared/domain/exception/Exception';
 
 import { ApiServerConfig } from '../config/app.config';
 

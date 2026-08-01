@@ -1,8 +1,7 @@
-import { v4 } from 'uuid';
-
 import { ExampleUseCaseDto } from '@core/example/application/use-case/dto/ExampleUseCaseDto';
 import { Example } from '@core/example/domain/entity/Example';
 import { CreateExampleEntityPayload } from '@core/example/domain/entity/type/CreateExampleEntityPayload';
+import { v4 } from 'uuid';
 
 describe('ExampleUseCaseDto', () => {
   describe('newFromExample', () => {

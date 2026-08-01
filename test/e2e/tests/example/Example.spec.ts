@@ -1,15 +1,14 @@
-import { HttpStatus } from '@nestjs/common';
-import supertest from 'supertest';
-import { validate as uuidValidate, v4 } from 'uuid';
-
 import { CreateExampleInputDto } from '@app/example/dto/create-example.dto';
 import { GetExampleOutputDto } from '@app/example/dto/get-example.dto';
 import { ListAllExampleOutputDto } from '@app/example/dto/list-all-example.dto';
 import { Code } from '@core/@shared/domain/error/Code';
 import { Example } from '@core/example/domain/entity/Example';
+import { HttpStatus } from '@nestjs/common';
 import { TestServer } from '@test/common/TestServer';
 import { ResponseExpect } from '@test/e2e/expect/ResponseExpect';
 import { ExampleFixture } from '@test/e2e/fixture/ExampleFixture';
+import supertest from 'supertest';
+import { validate as uuidValidate, v4 } from 'uuid';
 
 describe('Example', () => {
   let testServer: TestServer;

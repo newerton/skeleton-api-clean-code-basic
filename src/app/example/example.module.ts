@@ -1,10 +1,9 @@
-import { Module, Provider } from '@nestjs/common';
-import { getDataSourceToken } from '@nestjs/typeorm';
-import { DataSource } from 'typeorm';
-
 import { ExampleDITokens } from '@core/example/domain/di/ExampleDITokens';
 import { TypeOrmExample } from '@core/example/infrastructure/adapter/persistence/typeorm/entities/TypeOrmExample';
 import { TypeOrmExampleRepositoryAdapter } from '@core/example/infrastructure/adapter/persistence/typeorm/repository/TypeOrmExampleRepositoryAdapter';
+import { Module, Provider } from '@nestjs/common';
+import { getDataSourceToken } from '@nestjs/typeorm';
+import { DataSource } from 'typeorm';
 
 import { ExampleController } from './example.controller';
 import { CreateExampleService } from './service/create-example.service';

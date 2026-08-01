@@ -34,7 +34,7 @@ describe('ValueObject Unit Tests', () => {
 
     test.each(arrange)('validate %j', (item) => {
       const vo = new StubValueObject(item.received);
-      expect(vo + '').toBe(item.expected);
+      expect(`${vo}`).toBe(item.expected);
     });
   });
 

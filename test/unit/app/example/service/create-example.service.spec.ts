@@ -1,5 +1,3 @@
-import { Test, TestingModule } from '@nestjs/testing';
-
 import { CreateExampleService } from '@app/example/service/create-example.service';
 import { Code } from '@core/@shared/domain/error/Code';
 import { Exception } from '@core/@shared/domain/exception/Exception';
@@ -11,6 +9,7 @@ import { Example } from '@core/example/domain/entity/Example';
 import { ExampleRepository } from '@core/example/domain/port/repository/ExampleRepository';
 import { CreateExamplePort } from '@core/example/domain/port/use-case/CreateExamplePort';
 import { TypeOrmExampleRepositoryAdapter } from '@core/example/infrastructure/adapter/persistence/typeorm/repository/TypeOrmExampleRepositoryAdapter';
+import { Test, TestingModule } from '@nestjs/testing';
 
 describe('CreateExampleService', () => {
   let createExampleService: CreateExampleUseCase;

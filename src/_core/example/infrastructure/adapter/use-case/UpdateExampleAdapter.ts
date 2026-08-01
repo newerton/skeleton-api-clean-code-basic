@@ -1,8 +1,7 @@
-import { Exclude, Expose, Transform, plainToClass } from 'class-transformer';
-import { IsBoolean, IsOptional, IsString, IsUUID } from 'class-validator';
-
 import { UseCaseValidatableAdapter } from '@core/@shared/infrastructure/adapter/use-case/UseCaseValidatableAdapter';
 import { UpdateExamplePort } from '@core/example/domain/port/use-case/UpdateExamplePort';
+import { Exclude, Expose, Transform, plainToClass } from 'class-transformer';
+import { IsBoolean, IsOptional, IsString, IsUUID } from 'class-validator';
 
 @Exclude()
 export class UpdateExampleAdapter

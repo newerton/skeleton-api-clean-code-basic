@@ -1,3 +1,15 @@
+import { ErrorSchema } from '@app/@common/documentation/error.schema';
+import { JoiValidationPipe } from '@app/@common/pipes/joi-validation.pipe';
+import { CoreApiResponse } from '@core/@shared/domain/api/CoreApiResponse';
+import { CreateExampleUseCase } from '@core/example/application/use-case/CreateExampleUseCase';
+import { DeleteExampleUseCase } from '@core/example/application/use-case/DeleteExampleUseCase';
+import { ExampleUseCaseDto } from '@core/example/application/use-case/dto/ExampleUseCaseDto';
+import { GetExampleUseCase } from '@core/example/application/use-case/GetExampleUseCase';
+import { ListAllExampleUseCase } from '@core/example/application/use-case/ListAllExampleUseCase';
+import { UpdateExampleUseCase } from '@core/example/application/use-case/UpdateExampleUseCase';
+import { ExampleDITokens } from '@core/example/domain/di/ExampleDITokens';
+import { CreateExampleAdapter } from '@core/example/infrastructure/adapter/use-case/CreateExampleAdapter';
+import { UpdateExampleAdapter } from '@core/example/infrastructure/adapter/use-case/UpdateExampleAdapter';
 import {
   Body,
   Controller,
@@ -18,19 +30,6 @@ import {
   ApiTags,
   ApiUnprocessableEntityResponse,
 } from '@nestjs/swagger';
-
-import { ErrorSchema } from '@app/@common/documentation/error.schema';
-import { JoiValidationPipe } from '@app/@common/pipes/joi-validation.pipe';
-import { CoreApiResponse } from '@core/@shared/domain/api/CoreApiResponse';
-import { CreateExampleUseCase } from '@core/example/application/use-case/CreateExampleUseCase';
-import { DeleteExampleUseCase } from '@core/example/application/use-case/DeleteExampleUseCase';
-import { ExampleUseCaseDto } from '@core/example/application/use-case/dto/ExampleUseCaseDto';
-import { GetExampleUseCase } from '@core/example/application/use-case/GetExampleUseCase';
-import { ListAllExampleUseCase } from '@core/example/application/use-case/ListAllExampleUseCase';
-import { UpdateExampleUseCase } from '@core/example/application/use-case/UpdateExampleUseCase';
-import { ExampleDITokens } from '@core/example/domain/di/ExampleDITokens';
-import { CreateExampleAdapter } from '@core/example/infrastructure/adapter/use-case/CreateExampleAdapter';
-import { UpdateExampleAdapter } from '@core/example/infrastructure/adapter/use-case/UpdateExampleAdapter';
 
 import {
   CreateExampleInputDto,

@@ -1,7 +1,6 @@
-import { validate as uuidValidate, v4 } from 'uuid';
-
 import { Example } from '@core/example/domain/entity/Example';
 import { CreateExampleEntityPayload } from '@core/example/domain/entity/type/CreateExampleEntityPayload';
+import { validate as uuidValidate, v4 } from 'uuid';
 
 describe('Example', () => {
   describe('new', () => {

@@ -1,7 +1,6 @@
-import * as JoiBase from 'joi';
-
 import { CreateSchema } from '@app/@common/schemas/joi/joi.create-schema.interface';
 import joiMessagesSchema from '@app/@common/schemas/joi/joi.messages.schema';
+import * as JoiBase from 'joi';
 
 const Joi = JoiBase;
 

@@ -1,11 +1,10 @@
-import * as JoiBase from 'joi';
-
 import {
   JoiValidationException,
   JoiValidationPipe,
   ValidationType,
 } from '@app/@common/pipes/joi-validation.pipe';
 import { CreateSchema } from '@app/@common/schemas/joi/joi.create-schema.interface';
+import * as JoiBase from 'joi';
 
 const Joi = JoiBase;
 export class TestSchema implements CreateSchema {

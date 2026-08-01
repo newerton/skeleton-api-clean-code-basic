@@ -1,6 +1,3 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { v4 } from 'uuid';
-
 import { GetExampleService } from '@app/example/service/get-example.service';
 import { Code } from '@core/@shared/domain/error/Code';
 import { Exception } from '@core/@shared/domain/exception/Exception';
@@ -11,6 +8,8 @@ import { ExampleDITokens } from '@core/example/domain/di/ExampleDITokens';
 import { Example } from '@core/example/domain/entity/Example';
 import { ExampleRepository } from '@core/example/domain/port/repository/ExampleRepository';
 import { TypeOrmExampleRepositoryAdapter } from '@core/example/infrastructure/adapter/persistence/typeorm/repository/TypeOrmExampleRepositoryAdapter';
+import { Test, TestingModule } from '@nestjs/testing';
+import { v4 } from 'uuid';
 
 describe('GetExampleService', () => {
   let getExampleService: GetExampleUseCase;

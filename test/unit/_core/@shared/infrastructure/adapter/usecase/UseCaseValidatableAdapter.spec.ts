@@ -1,9 +1,8 @@
-import { IsString } from 'class-validator';
-
 import { Code } from '@core/@shared/domain/error/Code';
 import { Exception } from '@core/@shared/domain/exception/Exception';
 import { ClassValidationDetails } from '@core/@shared/domain/utils/class-validator/ClassValidator';
 import { UseCaseValidatableAdapter } from '@core/@shared/infrastructure/adapter/use-case/UseCaseValidatableAdapter';
+import { IsString } from 'class-validator';
 
 class MockAdapter extends UseCaseValidatableAdapter {
   @IsString()

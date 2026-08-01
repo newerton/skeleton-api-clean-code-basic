@@ -1,8 +1,7 @@
-import { v4 } from 'uuid';
-
 import { Example } from '@core/example/domain/entity/Example';
 import { TypeOrmExampleMapper } from '@core/example/infrastructure/adapter/persistence/typeorm/entities/mapper/TypeOrmExampleMapper';
 import { TypeOrmExample } from '@core/example/infrastructure/adapter/persistence/typeorm/entities/TypeOrmExample';
+import { v4 } from 'uuid';
 
 describe('TypeOrmExampleMapper', () => {
   test('toOrmEntity', async () => {

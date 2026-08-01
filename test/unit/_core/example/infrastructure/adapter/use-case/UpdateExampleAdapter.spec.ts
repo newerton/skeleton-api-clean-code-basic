@@ -1,7 +1,6 @@
-import { v4 } from 'uuid';
-
 import { UpdateExamplePort } from '@core/example/domain/port/use-case/UpdateExamplePort';
 import { UpdateExampleAdapter } from '@core/example/infrastructure/adapter/use-case/UpdateExampleAdapter';
+import { v4 } from 'uuid';
 
 describe('UpdateExampleAdapter', () => {
   test('Should return all attributes', async () => {

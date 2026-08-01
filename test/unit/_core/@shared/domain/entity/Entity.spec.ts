@@ -1,11 +1,10 @@
-import { IsString } from 'class-validator';
-import { v4 } from 'uuid';
-
 import { Entity } from '@core/@shared/domain/entity/Entity';
 import { Code } from '@core/@shared/domain/error/Code';
 import { Exception } from '@core/@shared/domain/exception/Exception';
 import { ClassValidationDetails } from '@core/@shared/domain/utils/class-validator/ClassValidator';
 import { UniqueEntityUuid } from '@core/@shared/domain/value-object/UniqueEntityUuid';
+import { IsString } from 'class-validator';
+import { v4 } from 'uuid';
 
 type MockProperties = {
   name: string;

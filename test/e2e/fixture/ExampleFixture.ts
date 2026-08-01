@@ -1,9 +1,8 @@
-import { TestingModule } from '@nestjs/testing';
-import { v4 } from 'uuid';
-
 import { ExampleDITokens } from '@core/example/domain/di/ExampleDITokens';
 import { Example } from '@core/example/domain/entity/Example';
 import { ExampleRepository } from '@core/example/domain/port/repository/ExampleRepository';
+import { TestingModule } from '@nestjs/testing';
+import { v4 } from 'uuid';
 
 export class ExampleFixture {
   constructor(private readonly testingModule: TestingModule) {}

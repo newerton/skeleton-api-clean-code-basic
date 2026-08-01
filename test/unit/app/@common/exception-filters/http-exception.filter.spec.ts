@@ -1,3 +1,6 @@
+import { HttpExceptionFilter } from '@app/@common/exception-filters/http-exception.filter';
+import { Code } from '@core/@shared/domain/error/Code';
+import { Exception } from '@core/@shared/domain/exception/Exception';
 import {
   HttpException,
   HttpStatus,
@@ -5,10 +8,6 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
-
-import { HttpExceptionFilter } from '@app/@common/exception-filters/http-exception.filter';
-import { Code } from '@core/@shared/domain/error/Code';
-import { Exception } from '@core/@shared/domain/exception/Exception';
 
 const mockAppLoggerService = {
   info: jest.fn(),

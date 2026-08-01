@@ -1,3 +1,4 @@
+import { CoreApiResponse } from '@core/@shared/domain/api/CoreApiResponse';
 import {
   CallHandler,
   ExecutionContext,
@@ -8,8 +9,6 @@ import {
 import { Request } from 'express';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-
-import { CoreApiResponse } from '@core/@shared/domain/api/CoreApiResponse';
 
 @Injectable()
 export class HttpLoggingInterceptor implements NestInterceptor {

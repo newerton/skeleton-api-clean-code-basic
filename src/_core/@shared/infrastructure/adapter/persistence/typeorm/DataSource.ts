@@ -1,5 +1,4 @@
-import * as path from 'path';
-
+import * as path from 'node:path';
 import * as dotenv from 'dotenv';
 import { DataSource, DataSourceOptions } from 'typeorm';
 
