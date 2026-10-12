@@ -53,7 +53,7 @@
     "dotenv-expand": "1000.0.0",
     "env-var": "7.5.0",
     "helmet": "8.3.0",
-    "joi": "18.2.8",
+    "joi": "18.2.9",
     "nestjs-pino": "4.6.1",
     "pg": "8.23.0",
     "pino-http": "11.0.0",
